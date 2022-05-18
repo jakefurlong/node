@@ -42,6 +42,8 @@ apt-get -y install docker-ce
 
 Inside the container, change access to /var/run/<contents> `chmod 775 /var/run/*`
 
+Create a Jenkins credential that matches the credential name in your Jenkinsfile
+
 ## Create a Pipeline
 - New Item
 - Pipeline
