@@ -17,10 +17,12 @@ This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
 ```
 
 - skip and login as admin user
+- Install all the Docker plugins
+- Go to the terminal to remote into the container
 - docker exec -it -u root jenkins bash
 
 
-Install extras in Jenkins container
+Install the following extras in Jenkins container (copy & paste)
 
 ```
 apt-get update && \
@@ -38,7 +40,7 @@ apt-get update && \
 apt-get -y install docker-ce
 ```
 
-Inside the container, give acces to /var/run/* 777
+Inside the container, change access to /var/run/<contents> `chmod 775 /var/run/*`
 
 ## Create a Pipeline
 - New Item
@@ -51,3 +53,5 @@ Inside the container, give acces to /var/run/* 777
 - Branch = main
 - Save
 - Build now & wait
+- Push a change to your repo
+- Wait for Jenkins to pick up the change
